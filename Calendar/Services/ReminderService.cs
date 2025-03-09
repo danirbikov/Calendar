@@ -33,9 +33,9 @@ namespace Calendar.Jobs
                 var hubContext = scope.ServiceProvider.GetRequiredService<IHubContext<NotificationSignalRHub>>();
 
                 var notes = await readRepository.GetAllAsync();
-                var remnderNotes = notes.Where(n => n.ReminderTime <= DateTime.UtcNow && n.IsNotified == false).ToList();
+                var reminderNotes = notes.Where(n => n.ReminderTime <= DateTime.UtcNow && n.IsNotified == false).ToList();
 
-                foreach (var note in notes)
+                foreach (var note in reminderNotes)
                 {
                     try
                     {
