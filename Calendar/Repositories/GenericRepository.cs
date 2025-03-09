@@ -57,7 +57,7 @@ namespace Calendar.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteByIdAsync(Guid id)
+        public async Task<bool> DeleteByIdAsync(Guid id)
         {
             var entity = await GetByIdAsync(id);
             if (entity != null)
@@ -66,7 +66,7 @@ namespace Calendar.Repositories
                 entity.IsActive = false;
                 await UpdateAsync(entity);
             }
-            await _context.SaveChangesAsync();
+            return (await _context.SaveChangesAsync()) > 0 ? true : false;
         }
         public async Task<int> SaveChangesAsync() => await _context.SaveChangesAsync();
 

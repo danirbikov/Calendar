@@ -19,9 +19,9 @@ namespace Calendar.MediatR.Commands.Notes
        
         public async Task<bool> Handle(DeleteNoteRequest request, CancellationToken cancellationToken)
         {
-            var item = _noteRepository.DeleteByIdAsync(request.Id);
+            var result = await _noteRepository.DeleteByIdAsync(request.Id);
 
-            return item == null ? false : true;
+            return result;
         }
     }
 
