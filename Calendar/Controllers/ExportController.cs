@@ -1,12 +1,6 @@
-using Calendar.Data;
-using Calendar.Interfaces;
-using Calendar.MediatR.Commands.Exports;
-using Calendar.MediatR.Requests;
-using Calendar.Models;
-using Calendar.Models.DTO;
+using Calendar.MediatR.Requests.Exports;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.OData.Query;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
 namespace Calendar.Controllers;
 
