@@ -20,7 +20,6 @@
     </PackageReference>
     <PackageReference Include="Microsoft.OData.Edm" Version="8.2.3" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
-    <PackageReference Include="Quartz" Version="3.14.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
